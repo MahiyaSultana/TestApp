@@ -1,0 +1,37 @@
+<html>
+<head>
+    <h1 style="text-align: center">Registration Form</h1>
+</head>
+<body>
+<form style="text-align: center">
+username:<input type="text" id="username"><br>
+password:<input type="password" id="Password"><br>
+url:<input type="text" id="got"><br>
+<button onclick="userdata()">submit</button>
+<p id="d_username"> </p>
+<p id="d_password"> </p>
+<div id="div1" ></div>
+</div>
+</form>
+<script>
+function userdata(){
+    event.preventDefault();
+
+
+    var div = document.createElement("div");
+    var got = document.createElement("img");
+    var t = document.createTextNode("got");
+    div.appendChild(t);
+    document.getElementById("div1").appendChild(got);
+
+
+    var username=document.getElementById("username");
+    var d_username=document.getElementById("d_username");
+    d_username.innerHTML=username.value;
+    var Password=document.getElementById("Password");
+    var d_password=document.getElementById("d_password");
+    d_password.innerHTML=Password.value;
+}
+</script>
+</body>
+</html>
